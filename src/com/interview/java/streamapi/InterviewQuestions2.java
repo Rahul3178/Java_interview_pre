@@ -99,6 +99,8 @@ public class InterviewQuestions2 {
 		 List<String> names = Arrays.asList("AA", "BB", "AA", "CC","BB","aa");
 		 
 	List<String> names2=names.stream().map(s->s.concat("Rahul")).collect(Collectors.toList());
+String names3=	names.stream().collect(Collectors.joining("Rahul"));
+System.out.println(names3);
 	
 	
 	int n=10;
