@@ -100,7 +100,7 @@ public class InterviewQuestions2 {
 		 
 	List<String> names2=names.stream().map(s->s.concat("Rahul")).collect(Collectors.toList());
 String names3=	names.stream().collect(Collectors.joining("Rahul"));
-System.out.println(names3);
+System.out.println(names3+"concat");
 	
 	
 	int n=10;
