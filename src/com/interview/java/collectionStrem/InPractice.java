@@ -208,6 +208,23 @@ public class InPractice {
 		// 19. concat two list into a sorted order
 
 		// 20.Calculate the average age of employee
+			
+			Double avgsal=employee2.stream().mapToInt(Emp::getSalary).average().orElse(0.0);
+			System.out.println(avgsal);
+			// need to check how to round off or fixed decimal point of salary 
+			
+			List<List<Integer>> nestedList=Arrays.asList(
+					Arrays.asList(1,2,3,4,5),
+					Arrays.asList(6,7,8,9,10),
+					Arrays.asList(11,12,13,14,15)
+					);
+			
+			List<Integer> l=nestedList.stream().flatMap(stream->stream.stream()).collect(Collectors.toList());
+			System.out.println(l);
+			List<Integer> l2=l.stream().map(String::valueOf).filter(i->i.startsWith("1")).map(Integer::valueOf).collect(Collectors.toList());
+			System.out.println(l2);
+			
+			
 	}
 
 }
